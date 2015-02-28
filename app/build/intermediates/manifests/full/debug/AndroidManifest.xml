@@ -94,7 +94,7 @@
 
         <!-- weather model -->
         <activity
-            android:name="za.co.neilson.alarm.weatheractivity.WeatherInfoActivity"
+            android:name="za.co.neilson.alarm.weatherapi.WeatherInfoActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/18.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8f11f56e350eacabf2273f646d981356eea0ed77">
+        <dex dex="/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/classes-67a2b2e0bf94b6fe27cac14480b3b69f3ed147c8.jar" />
+    </item>
+    <item
         jar="/Users/zenkig/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
         jumboMode="false"
         revision="21.1.2"

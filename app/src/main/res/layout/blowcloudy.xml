@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-android:background="#C4D2E0" >
+    android:background="#C4D2E0" >
 
 
 <TextClock
@@ -29,43 +29,6 @@ android:background="#C4D2E0" >
     android:background="@drawable/transparent_color"
     android:layout_below="@+id/textClock"
     android:layout_centerHorizontal="true" />
-
-<!--<ImageButton-->
-    <!--android:id="@+id/cloud1"-->
-    <!--android:icon="@drawable/cloud1"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:contentDescription="@string/weatherfake"-->
-    <!--android:src="@drawable/cloud4"-->
-    <!--android:background="@drawable/transparent_color"-->
-    <!--android:layout_below="@+id/textClock"-->
-    <!--android:layout_alignParentLeft="true"-->
-    <!--android:layout_alignParentStart="true" />-->
-    <!--<ImageButton-->
-        <!--android:id="@+id/cloud2"-->
-        <!--android:icon="@drawable/cloud2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:contentDescription="@string/weatherfake"-->
-        <!--android:src="@drawable/cloud4"-->
-        <!--android:background="@drawable/transparent_color"-->
-        <!--android:layout_alignTop="@+id/cloud4"-->
-        <!--android:layout_alignLeft="@+id/cloud4"-->
-        <!--android:layout_alignStart="@+id/cloud4"-->
-        <!--android:layout_marginLeft="55dp"-->
-        <!--android:layout_marginStart="55dp" />-->
-
-    <!--<ImageButton-->
-    <!--android:id="@+id/cloud3"-->
-    <!--android:icon="@drawable/cloud3"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:contentDescription="@string/weatherfake"-->
-    <!--android:src="@drawable/cloud4"-->
-    <!--android:background="@drawable/transparent_color"-->
-        <!--android:layout_below="@+id/cloud1"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentEnd="true" />-->
 
     <ImageButton
     android:id="@+id/cloudallfake"

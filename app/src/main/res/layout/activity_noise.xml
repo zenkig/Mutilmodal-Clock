@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 tools:context="za.co.neilson.alarm.weatheractivity.NoiseActivity"
 android:layout_width="fill_parent"
 android:layout_height="fill_parent"
-android:background="#EEC772"
+android:background="#C4D2E0"
 android:orientation="vertical"
 android:weightSum="1">
 
@@ -33,11 +33,11 @@ android:weightSum="1">
 
 <ImageButton
     android:id="@+id/status"
-    android:icon="@drawable/sunnypic"
+    android:icon="@drawable/cloudallfake"
     android:layout_width="233dp"
     android:layout_height="wrap_content"
     android:contentDescription="@string/weatherfake"
-    android:src="@drawable/sunnypic"
+    android:src="@drawable/cloudallfake"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/transparent_color"
     android:layout_marginTop="30dp" />
@@ -58,12 +58,12 @@ android:weightSum="1">
 
 
 <ImageView
-    android:id="@+id/sunny"
+    android:id="@+id/cloudy"
     android:icon="@drawable/bell"
     android:layout_width="119dp"
     android:layout_height="34dp"
     android:contentDescription="@string/bell"
-    android:src="@drawable/sunny"
+    android:src="@drawable/cloudy"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/transparent_color"
     android:layout_marginTop="40dp" />

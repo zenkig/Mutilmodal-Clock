@@ -1,0 +1,3 @@
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/classes/debug
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/classes-67a2b2e0bf94b6fe27cac14480b3b69f3ed147c8.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-7a5f781362e5a87246998234ec1657ac0962f105.jar

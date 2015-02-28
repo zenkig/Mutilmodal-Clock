@@ -91,7 +91,8 @@
         android:layout_gravity="center_horizontal|bottom"
         android:layout_weight="0.25"
         android:background="@drawable/transparent_color"
-        android:layout_marginTop="20dp" />
+        android:layout_below="@+id/textClock"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
