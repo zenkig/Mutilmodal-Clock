@@ -95,7 +95,7 @@
 
         <!-- weather model -->
         <activity
-            android:name=".weatheractivity.WeatherInfoActivity"
+            android:name=".weatherapi.WeatherInfoActivity"
             android:label="@string/app_name" >
         </activity>
 
