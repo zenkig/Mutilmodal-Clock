@@ -4,8 +4,6 @@
     android:layout_height="match_parent"
     android:background="#EEC772">
 
-
-
 <TextClock
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -67,7 +65,7 @@
     android:layout_width="98dp"
     android:layout_height="36dp"
     android:contentDescription="@string/bell"
-    android:src="@drawable/Rainy"
+    android:src="@drawable/rainy"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/transparent_color"
     android:layout_marginTop="30dp" />

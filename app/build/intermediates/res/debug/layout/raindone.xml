@@ -2,10 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-android:background="#6EC1C5"
-
-android:id="@+id/">
+    android:background="#6EC1C5"
+>
 
 
 <TextClock
@@ -77,7 +75,7 @@ android:id="@+id/">
     android:layout_width="98dp"
     android:layout_height="36dp"
     android:contentDescription="@string/bell"
-    android:src="@drawable/Rainy"
+    android:src="@drawable/rainy"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/transparent_color"
     android:layout_alignParentBottom="true"

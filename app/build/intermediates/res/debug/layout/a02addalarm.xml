@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#345E60"
->
+    >
 
 
 <TimePicker
@@ -11,8 +11,6 @@
     android:layout_height="wrap_content"
     android:id="@+id/timePicker"
     android:layout_gravity="center_horizontal|top"
-    android:backgroundTint="#467C7F"
-    android:backgroundTintMode="add"
     android:layout_marginTop="30dp" />
 
 <ImageView
@@ -20,7 +18,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/imageView"
     android:layout_gravity="center_horizontal"
-    android:src="@drawable/Line"
+    android:src="@drawable/line"
     android:layout_marginTop="250dp" />
 
 <ToggleButton
