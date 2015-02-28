@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6EC1C5"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/weatherfake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/weatherfake"
+        android:icon="@drawable/weatherfake" />
+
+    <ImageButton
+        android:id="@+id/menu_item_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/bell"
+        android:icon="@drawable/bell" />
+
+
+</LinearLayout>
+
+<!-- From: file:/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/src/main/res/layout/normal1.xml -->

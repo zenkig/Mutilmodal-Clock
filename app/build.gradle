@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "za.co.neilson.alarm"
-        minSdkVersion 8
+        minSdkVersion 15
         targetSdkVersion 18
     }
 

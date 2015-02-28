@@ -161,3 +161,9 @@ ADDED from AndroidManifest.xml:91:9
 		ADDED from AndroidManifest.xml:93:13
 	android:name
 		ADDED from AndroidManifest.xml:92:13
+activity#za.co.neilson.alarm.weatheractivity.WeatherInfoActivity
+ADDED from AndroidManifest.xml:97:9
+	android:label
+		ADDED from AndroidManifest.xml:99:13
+	android:name
+		ADDED from AndroidManifest.xml:98:13

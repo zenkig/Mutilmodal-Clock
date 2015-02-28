@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6EC1C5"
+    android:orientation="vertical" >
+    
+  <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="201dp"
+  />
+
+
+</LinearLayout>
+
+<!-- From: file:/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/src/main/res/layout/speech_result_matches_frag.xml -->
