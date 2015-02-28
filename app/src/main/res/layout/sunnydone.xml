@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEC772">
+
+
+
+<TextClock
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textClock"
+    android:layout_gravity="center_horizontal"
+    android:textColor="#FFFFFF"
+    android:textSize="60sp"
+    android:textStyle="normal"
+    android:layout_marginTop="40dp" />
+
+<ImageButton
+    android:id="@+id/min5"
+    android:icon="@drawable/weatherfake"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/weatherfake"
+    android:src="@drawable/min5"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_weight="0.06"
+    android:background="@drawable/transparent_color"
+    android:layout_marginTop="20dp" />
+
+<ImageButton
+    android:id="@+id/sunnyfake"
+    android:icon="@drawable/sunnyfake"
+    android:layout_width="4973dp"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/weatherfake2"
+    android:src="@drawable/sunnyfake"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@drawable/transparent_color"
+    android:layout_marginTop="30dp" />
+
+<ImageButton
+    android:id="@+id/sunglass"
+    android:icon="@drawable/sunglass"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/umbrella"
+    android:src="@drawable/sunglass"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@drawable/transparent_color"
+    android:layout_marginTop="10dp" />
+
+<ImageButton
+    android:id="@+id/gotit"
+    android:icon="@drawable/gotit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/umbrella"
+    android:src="@drawable/gotit"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@drawable/transparent_color"
+    android:layout_marginTop="10dp" />
+
+<ImageView
+    android:id="@+id/rainy"
+    android:icon="@drawable/bell"
+    android:layout_width="98dp"
+    android:layout_height="36dp"
+    android:contentDescription="@string/bell"
+    android:src="@drawable/Rainy"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/transparent_color"
+    android:layout_marginTop="30dp" />
+
+
+</LinearLayout>
+

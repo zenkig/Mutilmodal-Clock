@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="#C4D2E0"
+android:id="@+id/">
+
+
+<TextClock
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textClock"
+    android:layout_gravity="center_horizontal"
+    android:textColor="#FFFFFF"
+    android:textSize="60sp"
+    android:textStyle="normal"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="36dp" />
+
+<ImageButton
+    android:id="@+id/min5"
+    android:icon="@drawable/weatherfake"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/weatherfake"
+    android:src="@drawable/min5"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_weight="0.06"
+    android:background="@drawable/transparent_color"
+    android:layout_below="@+id/textClock"
+    android:layout_centerHorizontal="true" />
+
+<!--<ImageButton-->
+    <!--android:id="@+id/cloud1"-->
+    <!--android:icon="@drawable/cloud1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:contentDescription="@string/weatherfake"-->
+    <!--android:src="@drawable/cloud4"-->
+    <!--android:background="@drawable/transparent_color"-->
+    <!--android:layout_below="@+id/textClock"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true" />-->
+    <!--<ImageButton-->
+        <!--android:id="@+id/cloud2"-->
+        <!--android:icon="@drawable/cloud2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:contentDescription="@string/weatherfake"-->
+        <!--android:src="@drawable/cloud4"-->
+        <!--android:background="@drawable/transparent_color"-->
+        <!--android:layout_alignTop="@+id/cloud4"-->
+        <!--android:layout_alignLeft="@+id/cloud4"-->
+        <!--android:layout_alignStart="@+id/cloud4"-->
+        <!--android:layout_marginLeft="55dp"-->
+        <!--android:layout_marginStart="55dp" />-->
+
+    <!--<ImageButton-->
+    <!--android:id="@+id/cloud3"-->
+    <!--android:icon="@drawable/cloud3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:contentDescription="@string/weatherfake"-->
+    <!--android:src="@drawable/cloud4"-->
+    <!--android:background="@drawable/transparent_color"-->
+        <!--android:layout_below="@+id/cloud1"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+
+    <ImageButton
+    android:id="@+id/cloudallfake"
+    android:icon="@drawable/cloud4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/weatherfake"
+    android:src="@drawable/cloudallfake"
+    android:background="@drawable/transparent_color"
+        android:layout_below="@+id/min5"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="57dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="Press the sun &amp; repeat the word you hear"
+    android:id="@+id/textView"
+    android:layout_gravity="center_horizontal"
+    android:textColor="#FFFFFF"
+    android:textSize="13dp"
+    android:layout_above="@+id/Cloudy"
+    android:layout_alignLeft="@+id/textClock"
+    android:layout_alignStart="@+id/textClock" />
+
+<ImageView
+    android:id="@+id/Cloudy"
+    android:icon="@drawable/Cloudy"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/bell"
+    android:src="@drawable/Cloudy"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/transparent_color"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+android:background="#6EC1C5"
+
+android:id="@+id/">
+
+
+<TextClock
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textClock"
+    android:layout_gravity="center_horizontal"
+    android:textColor="#FFFFFF"
+    android:textSize="60sp"
+    android:textStyle="normal"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="36dp" />
+
+<ImageButton
+    android:id="@+id/min5"
+    android:icon="@drawable/weatherfake"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/weatherfake"
+    android:src="@drawable/min5"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_weight="0.06"
+    android:background="@drawable/transparent_color"
+    android:layout_below="@+id/textClock"
+    android:layout_alignLeft="@+id/rainy"
+    android:layout_alignStart="@+id/rainy" />
+
+<ImageButton
+    android:id="@+id/weatherfake2"
+    android:icon="@drawable/weatherfake2"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/weatherfake2"
+    android:src="@drawable/weatherfake2"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@drawable/transparent_color"
+    android:layout_above="@+id/umbrella"
+    android:layout_centerHorizontal="true" />
+
+<ImageButton
+    android:id="@+id/umbrella"
+    android:icon="@drawable/umbrella"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/umbrella"
+    android:src="@drawable/umbrella"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@drawable/transparent_color"
+    android:layout_above="@+id/gotit"
+    android:layout_centerHorizontal="true" />
+
+<ImageButton
+    android:id="@+id/gotit"
+    android:icon="@drawable/gotit"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:contentDescription="@string/umbrella"
+    android:src="@drawable/gotit"
+    android:layout_gravity="center_horizontal|bottom"
+    android:background="@drawable/transparent_color"
+    android:layout_above="@+id/rainy"
+    android:layout_alignLeft="@+id/rainy"
+    android:layout_alignStart="@+id/rainy" />
+
+<ImageView
+    android:id="@+id/rainy"
+    android:icon="@drawable/bell"
+    android:layout_width="98dp"
+    android:layout_height="36dp"
+    android:contentDescription="@string/bell"
+    android:src="@drawable/Rainy"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/transparent_color"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+

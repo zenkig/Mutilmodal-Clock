@@ -6,15 +6,73 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#6EC1C5"
     tools:context="za.co.neilson.alarm.weatheractivity.ShakeActivity">
+
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        android:textStyle="normal"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/rainypic"
+        android:layout_alignStart="@+id/rainypic" />
+
+    <ImageButton
+        android:id="@+id/min5"
+        android:icon="@drawable/weatherfake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/weatherfake"
+        android:src="@drawable/min5"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_weight="0.06"
+        android:background="@drawable/transparent_color"
+        android:layout_below="@+id/textClock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+    <ImageButton
+        android:id="@+id/rainypic"
+        android:icon="@drawable/rainypic"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/weatherfake"
+        android:src="@drawable/rainypic"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/transparent_color"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/rainy"
+        android:icon="@drawable/bell"
+        android:layout_width="98dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/bell"
+        android:src="@drawable/Rainy"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/transparent_color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:textColor="#684828"
-        android:text="Shake off the rain!" />
-
+        android:textColor="#F8F8F8"
+        android:text="Shake off the rain!"
+        android:id="@+id/textView"
+        android:layout_marginBottom="36dp"
+        android:layout_above="@+id/rainy"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
+
+

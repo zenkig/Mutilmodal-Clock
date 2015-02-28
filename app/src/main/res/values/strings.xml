@@ -53,7 +53,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="weatherfake"></string>
     <string name="bell"></string>
     <string name="title_activity_shake">ShakeActivity</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_speech">SpeechActivity</string>
 
@@ -61,7 +60,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="textsunny">i love sunny day</string>
     <string name="speechConfirm">Bingooo!</string>
     <string name="title_activity_noise">NoiseActivity</string>
-
 
     <!-- Noise Activity -->
     <string name="settings">Settings</string>
@@ -84,6 +82,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="display_update_summary">Enable graphical volume meter</string>
     <string name="no_num_title">Missing Number</string>
     <string name="no_num_msg">No alert phone number has been set!</string>
-
+    <string name="alarmtime" />
+    <string name="weatherfake2" />
+    <string name="umbrella" />
 
 </resources>

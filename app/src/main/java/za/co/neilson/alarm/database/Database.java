@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import za.co.neilson.alarm.Alarm;
-import za.co.neilson.alarm.Alarm.Difficulty;
 
 /* 
  * usage:  
@@ -179,7 +178,7 @@ public class Database extends SQLiteOpenHelper {
                 e.printStackTrace();
             }
 
-            alarm.setDifficulty(Difficulty.values()[c.getInt(5)]);
+            alarm.setDifficulty(Alarm.Difficulty.values()[c.getInt(5)]);
             alarm.setAlarmTonePath(c.getString(6));
             alarm.setVibrate(c.getInt(7) == 1);
             alarm.setAlarmName(c.getString(8));
@@ -244,7 +243,7 @@ public class Database extends SQLiteOpenHelper {
                     e.printStackTrace();
                 }
 
-                alarm.setDifficulty(Difficulty.values()[cursor.getInt(4)]);
+                alarm.setDifficulty(Alarm.Difficulty.values()[cursor.getInt(4)]);
                 alarm.setAlarmTonePath(cursor.getString(5));
                 alarm.setVibrate(cursor.getInt(6) == 1);
                 alarm.setAlarmName(cursor.getString(7));

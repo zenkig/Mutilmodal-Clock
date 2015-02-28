@@ -7,6 +7,9 @@ package za.co.neilson.alarm;
 /**
  * This class makes all the calls to the RDF model
  */
+
+// TODO RDF control
+// TODO  control
 public class RDFModel {
 //    private Model model = ModelFactory.createDefaultModel();
 //

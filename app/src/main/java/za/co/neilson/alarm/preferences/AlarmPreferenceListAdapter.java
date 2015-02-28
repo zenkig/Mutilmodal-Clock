@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import za.co.neilson.alarm.Alarm;
-import za.co.neilson.alarm.preferences.AlarmPreference.Type;
 
 public class AlarmPreferenceListAdapter extends BaseAdapter implements Serializable {
 
@@ -160,22 +159,22 @@ public class AlarmPreferenceListAdapter extends BaseAdapter implements Serializa
     public void setMathAlarm(Alarm alarm) {
         this.alarm = alarm;
         preferences.clear();
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_ACTIVE, "Active", null, null, alarm.getAlarmActive(), Type.BOOLEAN));
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_NAME, "Label", alarm.getAlarmName(), null, alarm.getAlarmName(), Type.STRING));
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TIME, "Set time", alarm.getAlarmTimeString(), null, alarm.getAlarmTime(), Type.TIME));
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_REPEAT, "Repeat", alarm.getRepeatDaysString(), repeatDays, alarm.getDays(), Type.MULTIPLE_LIST));
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_DIFFICULTY, "Difficulty", alarm.getDifficulty().toString(), alarmDifficulties, alarm.getDifficulty(), Type.LIST));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_ACTIVE, "Active", null, null, alarm.getAlarmActive(), AlarmPreference.Type.BOOLEAN));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_NAME, "Label", alarm.getAlarmName(), null, alarm.getAlarmName(), AlarmPreference.Type.STRING));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TIME, "Set time", alarm.getAlarmTimeString(), null, alarm.getAlarmTime(), AlarmPreference.Type.TIME));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_REPEAT, "Repeat", alarm.getRepeatDaysString(), repeatDays, alarm.getDays(), AlarmPreference.Type.MULTIPLE_LIST));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_DIFFICULTY, "Difficulty", alarm.getDifficulty().toString(), alarmDifficulties, alarm.getDifficulty(), AlarmPreference.Type.LIST));
 
         Uri alarmToneUri = Uri.parse(alarm.getAlarmTonePath());
         Ringtone alarmTone = RingtoneManager.getRingtone(getContext(), alarmToneUri);
 
         if (alarmTone instanceof Ringtone && !alarm.getAlarmTonePath().equalsIgnoreCase("")) {
-            preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TONE, "Ringtone", alarmTone.getTitle(getContext()), alarmTones, alarm.getAlarmTonePath(), Type.LIST));
+            preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TONE, "Ringtone", alarmTone.getTitle(getContext()), alarmTones, alarm.getAlarmTonePath(), AlarmPreference.Type.LIST));
         } else {
-            preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TONE, "Ringtone", getAlarmTones()[0], alarmTones, null, Type.LIST));
+            preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TONE, "Ringtone", getAlarmTones()[0], alarmTones, null, AlarmPreference.Type.LIST));
         }
 
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_VIBRATE, "Vibrate", null, null, alarm.getVibrate(), Type.BOOLEAN));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_VIBRATE, "Vibrate", null, null, alarm.getVibrate(), AlarmPreference.Type.BOOLEAN));
     }
 
 

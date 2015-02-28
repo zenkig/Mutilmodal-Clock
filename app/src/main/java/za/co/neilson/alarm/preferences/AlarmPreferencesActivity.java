@@ -46,7 +46,6 @@ import za.co.neilson.alarm.Alarm;
 import za.co.neilson.alarm.BaseActivity;
 import za.co.neilson.alarm.R;
 import za.co.neilson.alarm.database.Database;
-import za.co.neilson.alarm.preferences.AlarmPreference.Key;
 
 public class AlarmPreferencesActivity extends BaseActivity {
 
@@ -126,7 +125,7 @@ public class AlarmPreferencesActivity extends BaseActivity {
 
                                 alarmPreference.setValue(input.getText().toString());
 
-                                if (alarmPreference.getKey() == Key.ALARM_NAME) {
+                                if (alarmPreference.getKey() == AlarmPreference.Key.ALARM_NAME) {
                                     alarm.setAlarmName(alarmPreference.getValue().toString());
                                 }
 

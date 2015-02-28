@@ -21,7 +21,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import za.co.neilson.alarm.R;
 import za.co.neilson.alarm.database.Database;
 
 public class AlarmListAdapter extends BaseAdapter {
