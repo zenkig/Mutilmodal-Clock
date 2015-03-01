@@ -1,21 +1,21 @@
 package za.co.neilson.alarm;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import za.co.neilson.alarm.weatherapi.WeatherFragment;
 
-public class HomeActivity extends ActionBarActivity implements
-        WeatherFragment.OnFragmentInteractionListener, AlarmActivity.OnFragmentInteractionListener {
+public class HomeActivity extends BaseActivity implements
+        WeatherFragment.OnFragmentInteractionListener, AlarmActivity.OnFragmentInteractionListener,
+        android.view.View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -43,5 +43,8 @@ public class HomeActivity extends ActionBarActivity implements
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onClick(View v) {
 
+    }
 }

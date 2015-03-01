@@ -3,6 +3,7 @@ package za.co.neilson.alarm.rdfmodel;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
@@ -11,13 +12,14 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import za.co.neilson.alarm.R;
 
 public class MainActivity extends Activity {
     protected RDFModel rdf;
     protected Spinner userprofile_spinner, difficulty_spinner, weather_spinner;
-    protected Boolean[] modalities = {false, false, false, false, false, false, false};//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
+    protected Boolean[] modalities = {false, false, false, false, false, false, false, false};//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
     Modality m = new Modality();
 
     @Override
@@ -58,7 +60,7 @@ public class MainActivity extends Activity {
                 String attr2 = difficulty_spinner.getSelectedItem().toString();
                 String attr3 = weather_spinner.getSelectedItem().toString();
 
-                //Log.i("rescue: mode", attr1 + " " + attr2 + " " + attr3);
+                Log.i("rescue: mode", attr1 + " " + attr2 + " " + attr3);
 
                 UserProfile userProfile = new UserProfile("http://imi.org/" + attr1, attr1);
                 Difficulty difficulty = new Difficulty("http://imi.org/" + attr2, attr2);
@@ -66,60 +68,40 @@ public class MainActivity extends Activity {
 
                 rdf.getModality(userProfile, difficulty, weather, m);
 
-                String in = m.getInputModality();
-                String out = m.getOutputModality();
+                ArrayList<String> inList = m.getInputModality();
+                ArrayList<String> outList = m.getOutputModality();
 
                 //Log.i("rescue", "final in:" + in + "; out: " + out);
 
-                Toast.makeText(getApplicationContext(), "InputModality:" + in + " OutputModality:" + out, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "InputModality:" + inList + " OutputModality:" + outList, Toast.LENGTH_SHORT).show();
 
-                /*
-                if (in.equals("VoiceModality")) {
-                    modalities[0] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (in.equals("GestureModality")) {
-                    modalities[1] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (in.equals("ShakeModality")) {
-                    modalities[2] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                }*/
-
-                if (in.equals("Voice")) {
-                    modalities[0] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (in.equals("Gesture")) {
-                    modalities[1] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (in.equals("Shake")) {
-                    modalities[2] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
+                for(int num=0; num<inList.size(); num++)
+                {
+                    if (inList.contains("Speak")) {
+                        modalities[0] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (inList.contains("Click")) {
+                        modalities[1] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (inList.contains("Blow")) {
+                        modalities[2] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (inList.contains("Wipe")) {
+                        modalities[3] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (inList.contains("Shake")) {
+                        modalities[4] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    }
                 }
-
-                /*
-                if (out.equals("VisualModality")) {
-                    modalities[3] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (out.equals("SoundModality")) {
-                    modalities[4] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (out.equals("VibrateModality")) {
-                    modalities[5] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (out.equals("FlashModality")) {
-                    modalities[6] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                }*/
-
-                if (out.equals("Visual")) {
-                    modalities[3] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (out.equals("Sound")) {
-                    modalities[4] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (out.equals("Vibrate")) {
-                    modalities[5] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
-                } else if (out.equals("Flash")) {
-                    modalities[6] = true;//Voice, Gesture, Shake, Visual, Sound, Vibrate, Flash
+                for(int num=0; num<outList.size(); num++) {
+                    if (outList.contains("Visual")) {
+                        modalities[5] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (outList.contains("Sound")) {
+                        modalities[6] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (outList.contains("Vibrate")) {
+                        modalities[7] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    } else if (outList.contains("Flash")) {
+                        modalities[8] = true;//Speak, Click, Blow, Wipe, Shake, Visual, Sound, Vibrate, Flash
+                    }
                 }
-
-
-
-                //Log.i("rescue", "a:" + modalities[0] + ";" +modalities[1] + ";" +modalities[2] + ";" +modalities[3] + ";" +modalities[4] + ";" +modalities[5] + ";" +modalities[6]);
-
+                //Log.i("rescue", "Speak: " + modalities[0] + "; Click: " +modalities[1] + "; Blow: " +modalities[2] + "; Wipe: " +modalities[3] + "; Shake: " +modalities[4] + "; Visual: " +modalities[5] + "; Sound: " +modalities[6] + "; Vibrate: " +modalities[7]+ "; Flash: " +modalities[8]);
             }
-
-
         });
-
-
     }
 }

@@ -38,13 +38,10 @@ public class AlarmAlertActivity extends Activity implements OnClickListener {
 
     private Alarm alarm;
     private MediaPlayer mediaPlayer;
-
     private StringBuilder answerBuilder = new StringBuilder();
-
     private MathProblem mathProblem; // weather problem class
     private ScrathActivity scrathSnowy; // weather problem class
     private Vibrator vibrator;
-
     private boolean alarmActive;
 
     private TextView problemView;
@@ -127,7 +124,6 @@ public class AlarmAlertActivity extends Activity implements OnClickListener {
 
         TelephonyManager telephonyManager = (TelephonyManager) this
                 .getSystemService(Context.TELEPHONY_SERVICE);
-
         PhoneStateListener phoneStateListener = new PhoneStateListener() {
             @Override
             public void onCallStateChanged(int state, String incomingNumber) {
@@ -158,7 +154,6 @@ public class AlarmAlertActivity extends Activity implements OnClickListener {
                 PhoneStateListener.LISTEN_CALL_STATE);
 
         // Toast.makeText(this, answerString, Toast.LENGTH_LONG).show();
-
         startAlarm(); // major clock counting event, to change sound/vibration mode
 
     }

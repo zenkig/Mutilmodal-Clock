@@ -26,12 +26,17 @@ import za.co.neilson.alarm.database.Database;
 public class AlarmListAdapter extends BaseAdapter {
 
     public static final String ALARM_FIELDS[] = {Database.COLUMN_ALARM_ACTIVE,
-            Database.COLUMN_ALARM_TIME, Database.COLUMN_ALARM_DAYS};
-    private AlarmActivity alarmActivity;
+                                                 Database.COLUMN_ALARM_TIME,
+                                                 Database.COLUMN_ALARM_DAYS};
+
+    private AlarmActivity alarmActivity; // original code
+//    private AlarmsFragment alarmsFragment;
     private List<Alarm> alarms = new ArrayList<Alarm>();
 
     public AlarmListAdapter(AlarmActivity alarmActivity) {
-        this.alarmActivity = alarmActivity;
+        this.alarmActivity = alarmActivity;  // original code
+//        this.alarmsFragment = alarmActivity;
+
 //		Database.init(alarmActivity);
 //		alarms = Database.getAll();
     }
@@ -54,8 +59,10 @@ public class AlarmListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
         if (null == view)
-            view = LayoutInflater.from(alarmActivity).inflate(
-                    R.layout.alarm_list_element, null);
+           view = LayoutInflater.from(alarmActivity).
+                                inflate(R.layout.alarm_list_element, null);
+//        view = LayoutInflater.from(alarmsFragment).
+//                inflate(R.layout.alarm_list_element, null);
 
         Alarm alarm = (Alarm) getItem(position);
 

@@ -1,19 +1,21 @@
 package za.co.neilson.alarm.rdfmodel;
 
+import java.util.ArrayList;
+
 public class Modality {
-	public String outputModality = "null";
-	public String inputModality = "Weather";
+	public ArrayList<String> outputModality = new ArrayList();
+	public ArrayList<String> inputModality = new ArrayList();
 	
-	public String getOutputModality() {
+	public ArrayList<String> getOutputModality() {
 		return outputModality;
 	}
-	public void setOutputModality(String outputModality) {
+	public void setOutputModality(ArrayList<String> outputModality) {
 		this.outputModality = outputModality;
 	}
-	public String getInputModality() {
+	public ArrayList<String> getInputModality() {
 		return inputModality;
 	}
-	public void setInputModality(String inputModality) {
+	public void setInputModality(ArrayList<String> inputModality) {
 		this.inputModality = inputModality;
 	}
 }

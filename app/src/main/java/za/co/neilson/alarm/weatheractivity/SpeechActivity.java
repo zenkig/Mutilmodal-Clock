@@ -90,7 +90,7 @@ public class SpeechActivity extends ActionBarActivity {
 
                 String stringDefault = getString(R.string.textsunny);
                 if( matches_text.get(0) == stringDefault){
-//                    setString(R.string.bingo);
+                    setContentView(R.layout.activity_home); // view jump
                     System.out.println("Voice Output:" + R.string.speechConfirm); // compare
                     Speech.setText("You said " + stringDefault);
                    // setContentView(R.layout.activity_home);

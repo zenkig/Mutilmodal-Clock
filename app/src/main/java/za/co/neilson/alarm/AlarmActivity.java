@@ -18,6 +18,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -33,19 +34,17 @@ import za.co.neilson.alarm.preferences.AlarmPreferencesActivity;
 
 public class AlarmActivity extends BaseActivity {
 
-
-    ListView mathAlarmListView;
+    ListView AlarmsListView;
     AlarmListAdapter alarmListAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.alarm_activity);
 
-        mathAlarmListView = (ListView) findViewById(android.R.id.list);
-        mathAlarmListView.setLongClickable(true);
-        mathAlarmListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+        AlarmsListView = (ListView) findViewById(android.R.id.list);
+        AlarmsListView.setLongClickable(true);
+        AlarmsListView.setOnItemLongClickListener( new OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
                 view.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
@@ -80,8 +79,8 @@ public class AlarmActivity extends BaseActivity {
         callMathAlarmScheduleService();
 
        alarmListAdapter = new AlarmListAdapter(this);  // Newly changed 15.3.1
-        this.mathAlarmListView.setAdapter(alarmListAdapter);
-        mathAlarmListView.setOnItemClickListener(new OnItemClickListener() {
+        this.AlarmsListView.setAdapter(alarmListAdapter);
+        AlarmsListView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View v, int position, long id) {
@@ -95,13 +94,13 @@ public class AlarmActivity extends BaseActivity {
         });
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        boolean result = super.onCreateOptionsMenu(menu);
-//        menu.findItem(R.id.menu_item_save).setVisible(false);
-//        menu.findItem(R.id.menu_item_delete).setVisible(false);
-//        return result;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        boolean result = super.onCreateOptionsMenu(menu);
+        menu.findItem(R.id.menu_item_save).setVisible(false);
+        menu.findItem(R.id.menu_item_delete).setVisible(false);
+        return result;
+    }
 
     @Override
     protected void onPause() {

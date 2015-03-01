@@ -83,7 +83,6 @@ public abstract class BaseActivity extends ActionBarActivity implements android.
                 }
                 break;
             case R.id.menu_item_report:
-
                 url = "https://github.com/SheldonNeilson/Android-Alarm-Clock/issues";
                 intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
@@ -97,6 +96,8 @@ public abstract class BaseActivity extends ActionBarActivity implements android.
         return super.onOptionsItemSelected(item);
     }
 
+
+    // abstract service to call when alarm fires
     protected void callMathAlarmScheduleService() {
         Intent mathAlarmServiceIntent = new Intent(this, AlarmServiceBroadcastReciever.class);
         sendBroadcast(mathAlarmServiceIntent, null);

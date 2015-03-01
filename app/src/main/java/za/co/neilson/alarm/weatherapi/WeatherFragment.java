@@ -25,6 +25,7 @@ import za.co.neilson.alarm.R;
  * Use the {@link WeatherFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
+
 public class WeatherFragment extends android.support.v4.app.Fragment {
     private TextView cityText;
     private TextView condDescr;
