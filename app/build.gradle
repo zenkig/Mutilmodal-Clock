@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 18
+    compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "za.co.neilson.alarm"
+        applicationId "com.ups.alarm" // changed
         minSdkVersion 17
-        targetSdkVersion 18
+        targetSdkVersion 21
     }
 
     buildTypes {
@@ -19,5 +19,13 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:18.0.0'
+//    compile 'com.android.support:appcompat-v7:18.0.0'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile files('libs/androjena_0.5.jar')
+    compile files('libs/arqoid_0.5.jar')
+    compile files('libs/icu4j-3.4.5.jar')
+    compile files('libs/iri-0.8.jar')
+    compile files('libs/lucenoid_3.0.2.jar')
+    compile files('libs/slf4j-android-1.6.1-RC1.jar')
 }

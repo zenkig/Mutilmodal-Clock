@@ -68,11 +68,9 @@ public class AlarmListAdapter extends BaseAdapter {
                 .findViewById(R.id.textView_alarm_time);
         alarmTimeView.setText(alarm.getAlarmTimeString());
 
-
         TextView alarmDaysView = (TextView) view
                 .findViewById(R.id.textView_alarm_days);
         alarmDaysView.setText(alarm.getRepeatDaysString());
-
 
         return view;
     }

@@ -71,7 +71,6 @@ public class ShakeActivity extends Activity {
             }
 
             float[] values = event.values;
-
             /**
              * 一般在这三个方向的重力加速度达到20就达到了摇晃手机的状态 x : x轴方向的重力加速度，向右为正 y :
              * y轴方向的重力加速度，向前为正 z : z轴方向的重力加速度，向上为正

@@ -20,28 +20,24 @@ public class WeatherInfoActivity extends FragmentActivity {
 	private TextView press;
 	private TextView windSpeed;
 	private TextView windDeg;
-	
 	private TextView hum;
 	private ImageView imgView;
-
 	
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.fragment_weatherinfo);
-//		String city = "London, UK";
+        setContentView(R.layout.fragment_weatherinfo);
         String city = "Paris, FR";  // city settings, use paris by default
 
-
-        cityText = (TextView) findViewById(R.id.cityText);
+        cityText = (TextView)  findViewById(R.id.cityText);
 		condDescr = (TextView) findViewById(R.id.condDescr);
-		temp = (TextView) findViewById(R.id.temp);
+		temp = (TextView)  findViewById(R.id.temp);
 		hum = (TextView) findViewById(R.id.hum);
 		press = (TextView) findViewById(R.id.press);
-		windSpeed = (TextView) findViewById(R.id.windSpeed);
-		windDeg = (TextView) findViewById(R.id.windDeg);
-		imgView = (ImageView) findViewById(R.id.condIcon);
-		
+		windSpeed = (TextView)  findViewById(R.id.windSpeed);
+		windDeg = (TextView)  findViewById(R.id.windDeg);
+		imgView = (ImageView)  findViewById(R.id.condIcon);
+
 		JSONWeatherTask task = new JSONWeatherTask();
 		task.execute(new String[]{city});
 	}
@@ -73,9 +69,7 @@ public class WeatherInfoActivity extends FragmentActivity {
 		
 	}
 		
-		
-		
-		
+
 	@Override
 		protected void onPostExecute(Weather weather) {			
 			super.onPostExecute(weather);
@@ -89,18 +83,17 @@ public class WeatherInfoActivity extends FragmentActivity {
             String weatherID = String.valueOf(weather.currentCondition.getWeatherId());
             char initialNum = weatherID.charAt(0); // the code for openweather API
 
-
-
 			cityText.setText(weather.location.getCity() + "," + weather.location.getCountry());
 			condDescr.setText(weather.currentCondition.getCondition() + "(" + weather.currentCondition.getDescr() + ")");
 			temp.setText("" + Math.round((weather.temperature.getTemp() - 273.15)) + "℃");
 			hum.setText("" + weather.currentCondition.getHumidity() + "%");
 			press.setText("" + weather.currentCondition.getPressure() + " hPa");
 			windSpeed.setText("" + weather.wind.getSpeed() + " mps");
-			windDeg.setText("" + weather.wind.getDeg() + "�");
+			windDeg.setText("" + weather.wind.getDeg() + "km/h");
 				
 		}
 
 	
   }
+
 }

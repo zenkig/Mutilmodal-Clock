@@ -93,8 +93,8 @@ public class AlarmAlertActivity extends Activity implements OnClickListener {
                 mathProblem = new MathProblem(4);
                 break;
             case HARD:
-                //  mathProblem = new MathProblem(5);
-                new ScrathActivity();
+                mathProblem = new MathProblem(5);
+//                new ScrathActivity();
                 break;
         }
 

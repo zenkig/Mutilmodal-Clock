@@ -147,7 +147,6 @@ public class NoiseActivity extends Activity {
 
     private void updateDisplay(String status, double signalEMA) {
         mStatusView.setText(status);
-        //
         mDisplay.setLevel((int) signalEMA, mThreshold);
     }
 
@@ -155,10 +154,11 @@ public class NoiseActivity extends Activity {
     private void callForHelp() {
 
         //stop();
-
         // Show alert when noise thersold crossed
         Toast.makeText(getApplicationContext(), "Noise Test Passed, Congratulations!",
                 Toast.LENGTH_LONG).show();
+        setContentView(R.layout.raindone); // change view to
+
     }
 
 
@@ -184,6 +184,5 @@ public class NoiseActivity extends Activity {
 //            recorder = null;
 //        }
 //    }
-
 
 };

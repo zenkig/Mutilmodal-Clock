@@ -22,7 +22,6 @@
         android:contentDescription="@string/bell"
         android:icon="@drawable/bell" />
 
-
 </LinearLayout>
 
 <!-- From: file:/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/src/main/res/layout/normal1.xml -->

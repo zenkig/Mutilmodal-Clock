@@ -31,14 +31,14 @@ class SoundLevelView extends View {
                           R.drawable.redbar);
                 
                 mWidth  = mGreen.getIntrinsicWidth();
-                setMinimumWidth(mWidth*10);
+                setMinimumWidth(mWidth * 10);
                 
                 mHeight = mGreen.getIntrinsicHeight();
                 setMinimumHeight(mHeight);
                 
                 //Used to paint canvas background color
                 mBackgroundPaint = new Paint();
-                mBackgroundPaint.setColor(Color.BLACK);
+                mBackgroundPaint.setColor(Color.alpha(2));
         
         }
         

@@ -1,0 +1,140 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ex="http://imi.org/">
+
+    <!-- Input Part -->
+
+    <rdf:Description rdf:about="InputModality">
+        <rdf:type rdf:resource="Modality"/>
+    </rdf:Description>
+
+
+    <rdf:Description rdf:about="Speak">
+        <rdf:type rdf:resource="InputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasWeather rdf:resource="Sunny"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Click">
+        <rdf:type rdf:resource="InputModality"/>
+        <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasWeather rdf:resource="Sunny"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Blow">
+        <rdf:type rdf:resource="InputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasWeather rdf:resource="Cloudy"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Wipe">
+        <rdf:type rdf:resource="InputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasWeather rdf:resource="Snowy"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Shake">
+        <rdf:type rdf:resource="InputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasWeather rdf:resource="Rainy"/>
+    </rdf:Description>
+
+    <!-- Output Part -->
+
+    <rdf:Description rdf:about="OutputModality">
+        <rdf:type rdf:resource="Modality"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Visual">
+        <rdf:type rdf:resource="OutputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
+        <ex:hasWeather rdf:resource="Sunny"/>
+        <ex:hasWeather rdf:resource="Rainy"/>
+        <ex:hasWeather rdf:resource="Snowy"/>
+        <ex:hasWeather rdf:resource="Cloudy"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Sound">
+        <rdf:type rdf:resource="OutputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
+        <ex:hasWeather rdf:resource="Sunny"/>
+        <ex:hasWeather rdf:resource="Rainy"/>
+        <ex:hasWeather rdf:resource="Snowy"/>
+        <ex:hasWeather rdf:resource="Cloudy"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Vibrate">
+        <rdf:type rdf:resource="OutputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
+        <ex:hasWeather rdf:resource="Sunny"/>
+        <ex:hasWeather rdf:resource="Rainy"/>
+        <ex:hasWeather rdf:resource="Snowy"/>
+        <ex:hasWeather rdf:resource="Cloudy"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Flash">
+        <rdf:type rdf:resource="OutputModality"/>
+        <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
+        <ex:hasWeather rdf:resource="Sunny"/>
+        <ex:hasWeather rdf:resource="Rainy"/>
+        <ex:hasWeather rdf:resource="Snowy"/>
+        <ex:hasWeather rdf:resource="Cloudy"/>
+    </rdf:Description>
+
+
+    <!-- Context: UserProfile Part -->
+
+    <rdf:Description rdf:about="NormalUser">
+        <rdf:type rdf:resource="UserProfile"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="DeafUser">
+        <rdf:type rdf:resource="UserProfile"/>
+    </rdf:Description>
+
+    <!-- Context: Difficulty Part -->
+
+    <rdf:Description rdf:about="NormalDiff">
+        <rdf:type rdf:resource="Difficulty"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="HardDiff">
+        <rdf:type rdf:resource="Difficulty"/>
+    </rdf:Description>
+
+    <!-- Context: Weather Part -->
+
+    <rdf:Description rdf:about="Sunny">
+        <rdf:type rdf:resource="Weather"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Snowy">
+        <rdf:type rdf:resource="Weather"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Cloudy">
+        <rdf:type rdf:resource="Weather"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="Rainy">
+        <rdf:type rdf:resource="Weather"/>
+    </rdf:Description>
+
+
+    <!-- Activity Part -->
+
+
+    <!-- the scenario part (probably a separate file) -->
+
+
+</rdf:RDF>

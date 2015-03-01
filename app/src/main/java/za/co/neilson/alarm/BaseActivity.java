@@ -92,30 +92,6 @@ public abstract class BaseActivity extends ActionBarActivity implements android.
                 } catch (ActivityNotFoundException e) {
                     Toast.makeText(this, "Couldn't launch the bug reporting website", Toast.LENGTH_LONG).show();
                 }
-
-			/*
-            Intent send = new Intent(Intent.ACTION_SENDTO);
-			String uriText;
-
-			String emailAddress = "dontusemyemailaddress@yourdomain.com";
-			String subject = R.string.app_name + " Bug Report";
-			String body = "Debug:";
-			body += "\n OS Version: " + System.getProperty("os.version") + "(" + android.os.Build.VERSION.INCREMENTAL + ")";
-			body += "\n OS API Level: " + android.os.Build.VERSION.SDK_INT;
-			body += "\n Device: " + android.os.Build.DEVICE;
-			body += "\n Model (and Product): " + android.os.Build.MODEL + " (" + android.os.Build.PRODUCT + ")";
-			body += "\n Screen Width: " + getWindow().getWindowManager().getDefaultDisplay().getWidth();
-			body += "\n Screen Height: " + getWindow().getWindowManager().getDefaultDisplay().getHeight();
-			body += "\n Hardware Keyboard Present: " + (getResources().getConfiguration().keyboard != Configuration.KEYBOARD_NOKEYS);
-
-			uriText = "mailto:" + emailAddress + "?subject=" + subject + "&body=" + body;
-
-			uriText = uriText.replace(" ", "%20");
-			Uri emalUri = Uri.parse(uriText);
-
-			send.setData(emalUri);
-			startActivity(Intent.createChooser(send, "Send mail..."));
-			*/
                 break;
         }
         return super.onOptionsItemSelected(item);

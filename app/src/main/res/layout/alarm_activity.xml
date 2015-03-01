@@ -12,13 +12,14 @@
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:longClickable="true"></ListView>
+        android:longClickable="true">
+    </ListView>
 
     <TextView
         android:id="@android:id/empty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="@string/no_alarms" />
+        android:text= "@string/no_alarms" />
 
 </LinearLayout>

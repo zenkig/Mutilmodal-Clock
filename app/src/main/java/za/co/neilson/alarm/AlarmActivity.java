@@ -18,13 +18,11 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.HapticFeedbackConstants;
-import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -35,8 +33,7 @@ import za.co.neilson.alarm.preferences.AlarmPreferencesActivity;
 
 public class AlarmActivity extends BaseActivity {
 
-    protected RDFModel rdfModel;
-    ImageButton newButton;
+
     ListView mathAlarmListView;
     AlarmListAdapter alarmListAdapter;
 
@@ -62,7 +59,7 @@ public class AlarmActivity extends BaseActivity {
 
                         Database.init(AlarmActivity.this);
                         Database.deleteEntry(alarm);
-                        AlarmActivity.this.callMathAlarmScheduleService();
+                        callMathAlarmScheduleService();
 
                         updateAlarmList();
                     }
@@ -82,7 +79,7 @@ public class AlarmActivity extends BaseActivity {
 
         callMathAlarmScheduleService();
 
-        alarmListAdapter = new AlarmListAdapter(this);
+       alarmListAdapter = new AlarmListAdapter(this);  // Newly changed 15.3.1
         this.mathAlarmListView.setAdapter(alarmListAdapter);
         mathAlarmListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -98,13 +95,13 @@ public class AlarmActivity extends BaseActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        boolean result = super.onCreateOptionsMenu(menu);
-        menu.findItem(R.id.menu_item_save).setVisible(false);
-        menu.findItem(R.id.menu_item_delete).setVisible(false);
-        return result;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        boolean result = super.onCreateOptionsMenu(menu);
+//        menu.findItem(R.id.menu_item_save).setVisible(false);
+//        menu.findItem(R.id.menu_item_delete).setVisible(false);
+//        return result;
+//    }
 
     @Override
     protected void onPause() {
@@ -149,7 +146,9 @@ public class AlarmActivity extends BaseActivity {
                 Toast.makeText(AlarmActivity.this, alarm.getTimeUntilNextAlarmMessage(), Toast.LENGTH_LONG).show();
             }
         }
+    }
 
+    public interface OnFragmentInteractionListener {
     }
 
 }

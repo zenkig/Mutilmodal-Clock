@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6EC1C5"
+    android:orientation="vertical"
+    tools:context="za.co.neilson.alarm.HomeActivity"
+    android:weightSum="1">
+
+    <TextClock
+        android:layout_width="153dp"
+        android:layout_height="45dp"
+        android:id="@+id/textClock"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        android:textSize="40sp" />
+
+    <!-- up part weather size -->
+    <fragment
+        android:id = "@+id/fragment_weatheinfo"
+        android:name ="za.co.neilson.alarm.weatherapi.WeatherFragment"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5" />
+
+    <!-- down alarm set size -->
+    <fragment
+        android:id ="@+id/alarm_activity_frag"
+        android:name ="za.co.neilson.alarm.AlarmActivity"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout><!-- From: file:/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/src/main/res/layout/activity_home.xml -->

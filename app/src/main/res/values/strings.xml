@@ -82,8 +82,29 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="display_update_summary">Enable graphical volume meter</string>
     <string name="no_num_title">Missing Number</string>
     <string name="no_num_msg">No alert phone number has been set!</string>
-    <string name="alarmtime" />
-    <string name="weatherfake2" />
-    <string name="umbrella" />
+    <string name="alarmtime"></string>
+    <string name="weatherfake2"></string>
+    <string name="umbrella"></string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- RDF Model contorl settings -->
+    <string-array name="userprofile">
+        <item>NormalUser</item>
+        <item>DeafUser</item>
+    </string-array>
+    <string-array name="difficulty">
+        <item>NormalDiff</item>
+        <item>HardDiff</item>
+    </string-array>
+    <string-array name="weather">
+        <item>Sunny</item>
+        <item>Snowy</item>
+        <item>Cloudy</item>
+        <item>Rainy</item>
+    </string-array>
 
 </resources>
