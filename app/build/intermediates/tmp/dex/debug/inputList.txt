@@ -1,0 +1,11 @@
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/classes/debug
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-a8d58908fd33680bdff2549c1e3a5be0d43e3b7c.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/slf4j-android-1.6.1-RC1-58d81983f752496c6d8189bda034d2512d60f82e.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-d830bfb228983d9220be78e12443ae44130a0930.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/iri-0.8-75a04902ba513b6ccfcca6a45a84c511a63dd5b4.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/classes-a4092a272805aa44dcd137f474dd2b2b05f69aba.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/classes-c548430a33676bffc705ad8336327c1762be5d1d.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/lucenoid_3.0.2-9411fa29a3be86507f8c06994a5c5836f0add005.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/arqoid_0.5-3ebc4605cd90e95ef169c9bdabcfbe5d56ae2a6d.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/androjena_0.5-cc7b4f771006714ae1d8dc8b28a17ebe79c5e80e.jar
+/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/build/intermediates/pre-dexed/debug/icu4j-3.4.5-3acba2f532dc292079061c606ebdacf81dbaed81.jar

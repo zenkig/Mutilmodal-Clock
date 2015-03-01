@@ -15,9 +15,8 @@
         android:textColor="#FFFFFF"
         android:textSize="60sp"
         android:textStyle="normal"
-        android:layout_below="@+id/speech"
-        android:layout_alignLeft="@+id/status"
-        android:layout_alignStart="@+id/status" />
+        android:layout_alignTop="@+id/speech"
+        android:layout_alignEnd="@+id/min5" />
 
     <TextView
         android:id="@+id/welcome"
@@ -48,9 +47,9 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:layout_gravity="center"
-        android:text="i love sunny day"
+        android:text="sunny"
         android:textColor="#20882299"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/status"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -60,7 +59,8 @@
         android:layout_gravity="center"
         android:text="Start Speech :)"
         android:layout_below="@+id/status"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        style="@style/Base.Theme.AppCompat.Light" />
 
     <TextView
         android:id="@+id/speech"
@@ -78,7 +78,8 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/transparent_color"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_margin="40dp" />
 
 
     <ImageButton
@@ -92,7 +93,8 @@
         android:layout_weight="0.25"
         android:background="@drawable/transparent_color"
         android:layout_below="@+id/textClock"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_margin="18dp" />
 
 
 </RelativeLayout>

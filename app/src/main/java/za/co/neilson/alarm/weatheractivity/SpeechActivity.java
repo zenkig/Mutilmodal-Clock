@@ -63,6 +63,7 @@ public class SpeechActivity extends ActionBarActivity {
         }
         @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
             if (requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
 
                 match_text_dialog = new Dialog(SpeechActivity.this);
@@ -74,14 +75,14 @@ public class SpeechActivity extends ActionBarActivity {
                 ArrayAdapter<String> adapter =    new ArrayAdapter<String>(this,
                         android.R.layout.simple_list_item_1, matches_text);
 
-                System.out.println("语音选项:" + matches_text.get(0)); // debug speech
+                System.out.println("Voice Option:" + matches_text.get(0)); // debug speech
 
                 textlist.setAdapter(adapter);
                 textlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
-                        Speech.setText("You have said " +matches_text.get(position));
+                        Speech.setText("You said " +matches_text.get(position));
                         match_text_dialog.hide();
                     }
                 });
@@ -90,9 +91,12 @@ public class SpeechActivity extends ActionBarActivity {
                 String stringDefault = getString(R.string.textsunny);
                 if( matches_text.get(0) == stringDefault){
 //                    setString(R.string.bingo);
-                    System.out.println("比较结果:" + R.string.speechConfirm); // compare
+                    System.out.println("Voice Output:" + R.string.speechConfirm); // compare
+                    Speech.setText("You said " + stringDefault);
+                   // setContentView(R.layout.activity_home);
                 }else{
                     System.out.println("Try again !!"); // compare
+                    Speech.setText("Try again !!");
                 }
 
             }

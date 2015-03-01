@@ -11,25 +11,25 @@
 
     <item
         android:id="@+id/menu_item_save"
-        android:icon="@drawable/glyphicons_443_floppy_disk"
+        android:icon="@drawable/donemark"
         android:title="@string/menu_item_save"
         appcompat:showAsAction="always"></item>
     <item
         android:id="@+id/menu_item_delete"
-        android:icon="@drawable/glyphicons_016_bin"
+        android:icon="@drawable/cancel"
         android:title="@string/menu_item_delete"
         appcompat:showAsAction="always"></item>
     <item
         android:id="@+id/menu_item_rate"
-        android:icon="@drawable/glyphicons_049_star"
+        android:icon="@drawable/star"
         android:title="@string/menu_item_rate"></item>
     <item
         android:id="@+id/menu_item_website"
-        android:icon="@drawable/glyphicons_340_globe"
+        android:icon="@drawable/globe"
         android:title="@string/menu_item_website"></item>
     <item
         android:id="@+id/menu_item_report"
-        android:icon="@drawable/glyphicons_340_globe"
+        android:icon="@drawable/globe"
         android:title="@string/menu_item_report"></item>
 
 </menu>

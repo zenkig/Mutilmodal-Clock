@@ -74,20 +74,23 @@
         <activity
             android:name=".weatheractivity.ShakeActivity"
             android:label="@string/title_activity_shake" >
+        </activity>
+        <activity
+            android:name=".weatheractivity.SpeechActivity"
+            android:label="@string/title_activity_speech" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
-        <activity
-            android:name=".weatheractivity.SpeechActivity"
-            android:label="@string/title_activity_speech" >
-        </activity>
+
         <activity
             android:name=".weatheractivity.NoiseActivity"
             android:label="@string/title_activity_noise" >
         </activity>
+
         <activity
             android:name=".weatheractivity.ScrathActivity"
             android:label="@string/app_name" >
@@ -103,16 +106,16 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" >
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+
         </activity>
+
+        <activity
+            android:name=".rdfmodel.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+
     </application>
 
-         <activity
-           android:name=".rdfmodel.MainActivity"
-          android:label="@string/title_activity_main" >
-         </activity>
+
 
 </manifest>
