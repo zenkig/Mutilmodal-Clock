@@ -11,18 +11,24 @@
     <rdf:Description rdf:about="Speak">
         <rdf:type rdf:resource="InputModality"/>
         <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
         <ex:hasWeather rdf:resource="Sunny"/>
     </rdf:Description>
 
     <rdf:Description rdf:about="Click">
         <rdf:type rdf:resource="InputModality"/>
         <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
         <ex:hasWeather rdf:resource="Sunny"/>
     </rdf:Description>
 
     <rdf:Description rdf:about="Blow">
         <rdf:type rdf:resource="InputModality"/>
         <ex:hasUserProfile rdf:resource="NormalUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
         <ex:hasWeather rdf:resource="Cloudy"/>
     </rdf:Description>
 
@@ -30,6 +36,8 @@
         <rdf:type rdf:resource="InputModality"/>
         <ex:hasUserProfile rdf:resource="NormalUser"/>
         <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
         <ex:hasWeather rdf:resource="Snowy"/>
     </rdf:Description>
 
@@ -37,6 +45,8 @@
         <rdf:type rdf:resource="InputModality"/>
         <ex:hasUserProfile rdf:resource="NormalUser"/>
         <ex:hasUserProfile rdf:resource="DeafUser"/>
+        <ex:hasDifficulty rdf:resource="NormalDiff"/>
+        <ex:hasDifficulty rdf:resource="HardDiff"/>
         <ex:hasWeather rdf:resource="Rainy"/>
     </rdf:Description>
 
