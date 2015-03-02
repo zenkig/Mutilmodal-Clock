@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#6EC1C5"
     android:orientation="vertical"
-    tools:context="za.co.neilson.alarm.HomeActivity"
+    tools:context="com.ups.weatheralarm.HomeActivity"
     android:weightSum="1">
 
     <TextClock
@@ -21,7 +21,7 @@
     <!-- up part weather size -->
     <fragment
         android:id = "@+id/fragment_weatheinfo"
-        android:name ="za.co.neilson.alarm.weatherapi.WeatherFragment"
+        android:name ="com.ups.weatheralarm.weatherapi.WeatherFragment"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
@@ -36,13 +36,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.45" />
 
-    <!--<ListView-->
-        <!--android:id="@android:id/list"-->
-        <!--android:name ="za.co.neilson.alarm.AlarmActivity"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:longClickable="true">-->
-    <!--</ListView>-->
+    <ListView
+        android:id="@android:id/list"
+        android:name ="za.co.neilson.alarm.AlarmActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:longClickable="true">
+    </ListView>
 
     <!--<TextView-->
         <!--android:id="@android:id/empty"-->

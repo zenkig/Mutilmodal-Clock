@@ -75,13 +75,13 @@ MERGED from com.android.support:support-v4:21.0.3:16:5
 		ADDED from AndroidManifest.xml:24:9
 	android:theme
 		ADDED from AndroidManifest.xml:26:9
-activity#za.co.neilson.alarm.AlarmActivity
+activity#com.ups.weatheralarm.AlarmActivity
 ADDED from AndroidManifest.xml:32:9
 	android:label
 		ADDED from AndroidManifest.xml:34:13
 	android:name
 		ADDED from AndroidManifest.xml:33:13
-activity#za.co.neilson.alarm.preferences.AlarmPreferencesActivity
+activity#com.ups.weatheralarm.preferences.AlarmPreferencesActivity
 ADDED from AndroidManifest.xml:37:9
 	android:label
 		ADDED from AndroidManifest.xml:39:13
@@ -95,7 +95,7 @@ ADDED from AndroidManifest.xml:43:13
 		ADDED from AndroidManifest.xml:44:17
 	android:value
 		ADDED from AndroidManifest.xml:45:17
-service#za.co.neilson.alarm.service.AlarmService
+service#com.ups.weatheralarm.service.AlarmService
 ADDED from AndroidManifest.xml:48:9
 	android:label
 		ADDED from AndroidManifest.xml:51:13
@@ -105,7 +105,7 @@ ADDED from AndroidManifest.xml:48:9
 		ADDED from AndroidManifest.xml:52:13
 	android:name
 		ADDED from AndroidManifest.xml:49:13
-receiver#za.co.neilson.alarm.service.AlarmServiceBroadcastReciever
+receiver#com.ups.weatheralarm.service.AlarmServiceBroadcastReciever
 ADDED from AndroidManifest.xml:54:9
 	android:name
 		ADDED from AndroidManifest.xml:54:19
@@ -115,7 +115,7 @@ action#android.intent.action.BOOT_COMPLETED
 ADDED from AndroidManifest.xml:56:17
 	android:name
 		ADDED from AndroidManifest.xml:56:25
-activity#za.co.neilson.alarm.alert.AlarmAlertActivity
+activity#com.ups.weatheralarm.alert.AlarmAlertActivity
 ADDED from AndroidManifest.xml:60:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:63:13
@@ -123,11 +123,11 @@ ADDED from AndroidManifest.xml:60:9
 		ADDED from AndroidManifest.xml:62:13
 	android:name
 		ADDED from AndroidManifest.xml:61:13
-receiver#za.co.neilson.alarm.alert.AlarmAlertBroadcastReciever
+receiver#com.ups.weatheralarm.alert.AlarmAlertBroadcastReciever
 ADDED from AndroidManifest.xml:66:9
 	android:name
 		ADDED from AndroidManifest.xml:66:19
-receiver#za.co.neilson.alarm.telephony.PhoneStateChangedBroadcastReciever
+receiver#com.ups.weatheralarm.telephony.PhoneStateChangedBroadcastReciever
 ADDED from AndroidManifest.xml:67:9
 	android:name
 		ADDED from AndroidManifest.xml:67:19
@@ -137,37 +137,37 @@ action#android.intent.action.PHONE_STATE
 ADDED from AndroidManifest.xml:69:17
 	android:name
 		ADDED from AndroidManifest.xml:69:25
-activity#za.co.neilson.alarm.weatheractivity.ShakeActivity
+activity#com.ups.weatheralarm.weatheractivity.ShakeActivity
 ADDED from AndroidManifest.xml:74:9
 	android:label
 		ADDED from AndroidManifest.xml:76:13
 	android:name
 		ADDED from AndroidManifest.xml:75:13
-activity#za.co.neilson.alarm.weatheractivity.SpeechActivity
+activity#com.ups.weatheralarm.weatheractivity.SpeechActivity
 ADDED from AndroidManifest.xml:78:9
 	android:label
 		ADDED from AndroidManifest.xml:80:13
 	android:name
 		ADDED from AndroidManifest.xml:79:13
-activity#za.co.neilson.alarm.weatheractivity.NoiseActivity
+activity#com.ups.weatheralarm.weatheractivity.NoiseActivity
 ADDED from AndroidManifest.xml:83:9
 	android:label
 		ADDED from AndroidManifest.xml:85:13
 	android:name
 		ADDED from AndroidManifest.xml:84:13
-activity#za.co.neilson.alarm.weatheractivity.ScrathActivity
+activity#com.ups.weatheralarm.weatheractivity.ScrathActivity
 ADDED from AndroidManifest.xml:88:9
 	android:label
 		ADDED from AndroidManifest.xml:90:13
 	android:name
 		ADDED from AndroidManifest.xml:89:13
-activity#za.co.neilson.alarm.weatherapi.WeatherInfoActivity
+activity#com.ups.weatheralarm.weatherapi.WeatherInfoActivity
 ADDED from AndroidManifest.xml:94:9
 	android:label
 		ADDED from AndroidManifest.xml:96:13
 	android:name
 		ADDED from AndroidManifest.xml:95:13
-activity#za.co.neilson.alarm.HomeActivity
+activity#com.ups.weatheralarm.HomeActivity
 ADDED from AndroidManifest.xml:99:9
 	android:label
 		ADDED from AndroidManifest.xml:101:13
@@ -183,7 +183,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:104:17
 	android:name
 		ADDED from AndroidManifest.xml:104:27
-activity#za.co.neilson.alarm.rdfmodel.MainActivity
+activity#com.ups.weatheralarm.rdfmodel.MainActivity
 ADDED from AndroidManifest.xml:108:9
 	android:label
 		ADDED from AndroidManifest.xml:110:13

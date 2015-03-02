@@ -30,40 +30,40 @@
 
         <!-- following "name" is the Starting lunching activity for the Android App -->
         <activity
-            android:name="za.co.neilson.alarm.AlarmActivity"
+            android:name="com.ups.weatheralarm.AlarmActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="za.co.neilson.alarm.preferences.AlarmPreferencesActivity"
+            android:name="com.ups.weatheralarm.preferences.AlarmPreferencesActivity"
             android:label="@string/app_name"
-            android:parentActivityName="za.co.neilson.alarm.AlarmActivity" >
+            android:parentActivityName="com.ups.weatheralarm.AlarmActivity" >
 
             <!-- Parent activity meta-data to support API level 7+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AlarmActivity" />
+                android:value="com.ups.weatheralarm.AlarmActivity" />
         </activity>
 
         <service
-            android:name="za.co.neilson.alarm.service.AlarmService"
+            android:name="com.ups.weatheralarm.service.AlarmService"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"
             android:process="za.co.neilson.alarm.serviceProcess" />
 
-        <receiver android:name="za.co.neilson.alarm.service.AlarmServiceBroadcastReciever" >
+        <receiver android:name="com.ups.weatheralarm.service.AlarmServiceBroadcastReciever" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name="za.co.neilson.alarm.alert.AlarmAlertActivity"
+            android:name="com.ups.weatheralarm.alert.AlarmAlertActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
         </activity>
 
-        <receiver android:name="za.co.neilson.alarm.alert.AlarmAlertBroadcastReciever" />
-        <receiver android:name="za.co.neilson.alarm.telephony.PhoneStateChangedBroadcastReciever" >
+        <receiver android:name="com.ups.weatheralarm.alert.AlarmAlertBroadcastReciever" />
+        <receiver android:name="com.ups.weatheralarm.telephony.PhoneStateChangedBroadcastReciever" >
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
             </intent-filter>
@@ -71,29 +71,29 @@
 
         <!-- All weather activities to Multi-modal output -->
         <activity
-            android:name="za.co.neilson.alarm.weatheractivity.ShakeActivity"
+            android:name="com.ups.weatheralarm.weatheractivity.ShakeActivity"
             android:label="@string/title_activity_shake" >
         </activity>
         <activity
-            android:name="za.co.neilson.alarm.weatheractivity.SpeechActivity"
+            android:name="com.ups.weatheralarm.weatheractivity.SpeechActivity"
             android:label="@string/title_activity_speech" >
         </activity>
         <activity
-            android:name="za.co.neilson.alarm.weatheractivity.NoiseActivity"
+            android:name="com.ups.weatheralarm.weatheractivity.NoiseActivity"
             android:label="@string/title_activity_noise" >
         </activity>
         <activity
-            android:name="za.co.neilson.alarm.weatheractivity.ScrathActivity"
+            android:name="com.ups.weatheralarm.weatheractivity.ScrathActivity"
             android:label="@string/app_name" >
         </activity>
 
         <!-- weather model -->
         <activity
-            android:name="za.co.neilson.alarm.weatherapi.WeatherInfoActivity"
+            android:name="com.ups.weatheralarm.weatherapi.WeatherInfoActivity"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name="za.co.neilson.alarm.HomeActivity"
+            android:name="com.ups.weatheralarm.HomeActivity"
             android:label="@string/title_activity_home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -102,7 +102,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="za.co.neilson.alarm.rdfmodel.MainActivity"
+            android:name="com.ups.weatheralarm.rdfmodel.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
     </application>

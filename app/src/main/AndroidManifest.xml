@@ -30,75 +30,8 @@
 
         <!-- following "name" is the Starting lunching activity for the Android App -->
         <activity
-            android:name=".AlarmActivity"
+            android:name="com.ups.weatheralarm.AlarmActivity"
             android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".preferences.AlarmPreferencesActivity"
-            android:label="@string/app_name"
-            android:parentActivityName=".AlarmActivity" >
-
-            <!-- Parent activity meta-data to support API level 7+ -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".AlarmActivity" />
-        </activity>
-
-        <service
-            android:name=".service.AlarmService"
-            android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name"
-            android:process="za.co.neilson.alarm.serviceProcess" />
-
-        <receiver android:name=".service.AlarmServiceBroadcastReciever" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
-        <activity
-            android:name=".alert.AlarmAlertActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
-
-        <receiver android:name=".alert.AlarmAlertBroadcastReciever" />
-        <receiver android:name=".telephony.PhoneStateChangedBroadcastReciever" >
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-            </intent-filter>
-        </receiver>
-
-        <!-- All weather activities to Multi-modal output -->
-        <activity
-            android:name=".weatheractivity.ShakeActivity"
-            android:label="@string/title_activity_shake" >
-        </activity>
-        <activity
-            android:name=".weatheractivity.SpeechActivity"
-            android:label="@string/title_activity_speech" >
-        </activity>
-
-        <activity
-            android:name=".weatheractivity.NoiseActivity"
-            android:label="@string/title_activity_noise" >
-        </activity>
-
-        <activity
-            android:name=".weatheractivity.ScrathActivity"
-            android:label="@string/app_name" >
-        </activity>
-
-        <!-- weather model -->
-        <activity
-            android:name=".weatherapi.WeatherInfoActivity"
-            android:label="@string/app_name" >
-        </activity>
-
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -106,7 +39,74 @@
         </activity>
 
         <activity
-            android:name=".rdfmodel.MainActivity"
+            android:name="com.ups.weatheralarm.preferences.AlarmPreferencesActivity"
+            android:label="@string/app_name"
+            android:parentActivityName="com.ups.weatheralarm.AlarmActivity" >
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ups.weatheralarm.AlarmActivity" />
+        </activity>
+
+        <service
+            android:name="com.ups.weatheralarm.service.AlarmService"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:process="za.co.neilson.alarm.serviceProcess" />
+
+        <receiver android:name="com.ups.weatheralarm.service.AlarmServiceBroadcastReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.ups.weatheralarm.alert.AlarmAlertActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name="com.ups.weatheralarm.alert.AlarmAlertBroadcastReciever" />
+        <receiver android:name="com.ups.weatheralarm.telephony.PhoneStateChangedBroadcastReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- All weather activities to Multi-modal output -->
+        <activity
+            android:name="com.ups.weatheralarm.weatheractivity.ShakeActivity"
+            android:label="@string/title_activity_shake" >
+        </activity>
+        <activity
+            android:name="com.ups.weatheralarm.weatheractivity.SpeechActivity"
+            android:label="@string/title_activity_speech" >
+        </activity>
+
+        <activity
+            android:name="com.ups.weatheralarm.weatheractivity.NoiseActivity"
+            android:label="@string/title_activity_noise" >
+        </activity>
+
+        <activity
+            android:name="com.ups.weatheralarm.weatheractivity.ScrathActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- weather model -->
+        <activity
+            android:name="com.ups.weatheralarm.weatherapi.WeatherInfoActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="com.ups.weatheralarm.HomeActivity"
+            android:label="@string/title_activity_home" >
+        </activity>
+
+        <activity
+            android:name="com.ups.weatheralarm.rdfmodel.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
 
