@@ -7,29 +7,35 @@
         android:id="@+id/menu_item_new"
         android:icon="@drawable/bell"
         android:title="@string/menu_item_new"
-        appcompat:showAsAction="always"></item>
+        appcompat:showAsAction="always"/>
 
     <item
         android:id="@+id/menu_item_save"
         android:icon="@drawable/donemark"
         android:title="@string/menu_item_save"
-        appcompat:showAsAction="always"></item>
+        appcompat:showAsAction="always"/>
     <item
         android:id="@+id/menu_item_delete"
         android:icon="@drawable/cancel"
         android:title="@string/menu_item_delete"
-        appcompat:showAsAction="always"></item>
+        appcompat:showAsAction="always"/>
+    <item
+        android:id="@+id/menu_item_checkio"
+        android:icon="@drawable/star"
+        android:title="@string/menu_item_checkio"
+        appcompat:showAsAction="always"/>
+
     <item
         android:id="@+id/menu_item_rate"
         android:icon="@drawable/star"
-        android:title="@string/menu_item_rate"></item>
+        android:title="@string/menu_item_rate"/>
     <item
         android:id="@+id/menu_item_website"
         android:icon="@drawable/globe"
-        android:title="@string/menu_item_website"></item>
+        android:title="@string/menu_item_website"/>
     <item
         android:id="@+id/menu_item_report"
         android:icon="@drawable/globe"
-        android:title="@string/menu_item_report"></item>
+        android:title="@string/menu_item_report"/>
 
 </menu>

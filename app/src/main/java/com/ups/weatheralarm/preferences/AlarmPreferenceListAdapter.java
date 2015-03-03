@@ -1,14 +1,3 @@
-/* Copyright 2014 Sheldon Neilson www.neilson.co.za
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
- */
 package com.ups.weatheralarm.preferences;
 
 import android.content.Context;
@@ -29,13 +18,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ups.weatheralarm.Alarm;
+import com.ups.weatheralarm.rdfmodel.MainActivity;
+import com.ups.weatheralarm.rdfmodel.RDFModel;
 
 public class AlarmPreferenceListAdapter extends BaseAdapter implements Serializable {
 
     private final String[] repeatDays = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     private final String[] alarmDifficulties = {"Easy", "Medium", "Hard"};
+    private final String[] modeDifficulties = {"NormalDiff", "HardDiff"};
+    private final String[] modeUserProfile = {"NormalUser", "DeafUser"};
+    private final String[] modeWeather = {"Sunny", "Cloudy", "Snowy", "Rainy"};
+
+
     private Context context;
     private Alarm alarm;
+
+    private MainActivity rdf;
+
     private List<AlarmPreference> preferences = new ArrayList<AlarmPreference>();
     private String[] alarmTones;
     private String[] alarmTonePaths;
@@ -150,6 +149,17 @@ public class AlarmPreferenceListAdapter extends BaseAdapter implements Serializa
                 case ALARM_REPEAT:
                     alarm.setDays((Alarm.Day[]) preference.getValue());
                     break;
+                //TODO mode
+                case MODE_DIFFICULTY:
+                    alarm.setModeDifficulty(Alarm.ModeDifficulty.valueOf((String) preference.getValue()));
+                    break;
+                case MODE_USERPROFILE:
+                    alarm.setUserProfile(Alarm.ModeUserProfile.valueOf((String) preference.getValue()));
+                    break;
+                case MODE_WEATHER:
+                    alarm.setModeWeather(Alarm.ModeWeather.valueOf((String) preference.getValue()));
+                    break;
+
             }
         }
 
@@ -163,7 +173,10 @@ public class AlarmPreferenceListAdapter extends BaseAdapter implements Serializa
         preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_NAME, "Label", alarm.getAlarmName(), null, alarm.getAlarmName(), AlarmPreference.Type.STRING));
         preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_TIME, "Set time", alarm.getAlarmTimeString(), null, alarm.getAlarmTime(), AlarmPreference.Type.TIME));
         preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_REPEAT, "Repeat", alarm.getRepeatDaysString(), repeatDays, alarm.getDays(), AlarmPreference.Type.MULTIPLE_LIST));
-        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_DIFFICULTY, "Difficulty", alarm.getDifficulty().toString(), alarmDifficulties, alarm.getDifficulty(), AlarmPreference.Type.LIST));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.ALARM_DIFFICULTY, "MATH Difficulty", alarm.getDifficulty().toString(), alarmDifficulties, alarm.getDifficulty(), AlarmPreference.Type.LIST));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.MODE_DIFFICULTY, "Mode Difficulty", alarm.getModeDifficulty().toString(), modeDifficulties, alarm.getModeDifficulty(), AlarmPreference.Type.LIST));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.MODE_USERPROFILE, "User Profile", alarm.getModeUserProfile().toString(), modeUserProfile, alarm.getModeUserProfile(), AlarmPreference.Type.LIST));
+        preferences.add(new AlarmPreference(AlarmPreference.Key.MODE_WEATHER, "FAKE Weather", alarm.getModeWeather().toString(), modeWeather, alarm.getModeWeather(), AlarmPreference.Type.LIST));
 
         Uri alarmToneUri = Uri.parse(alarm.getAlarmTonePath());
         Ringtone alarmTone = RingtoneManager.getRingtone(getContext(), alarmToneUri);
@@ -192,6 +205,9 @@ public class AlarmPreferenceListAdapter extends BaseAdapter implements Serializa
 
     public String[] getAlarmDifficulties() {
         return alarmDifficulties;
+    }
+    public String[] getModeDifficulties() {
+        return modeDifficulties;
     }
 
     public String[] getAlarmTones() {

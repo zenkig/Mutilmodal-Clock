@@ -21,7 +21,7 @@ public class RDFModel {
     private Model model = ModelFactory.createDefaultModel();
 
 
-    RDFModel(Context context) throws IOException {
+    public RDFModel(Context context) throws IOException {
         InputStream f;
         //load model
         f = context.getAssets().open("rdfmodel.xml");
@@ -32,7 +32,7 @@ public class RDFModel {
      * query for the best modality to use based on the situation and activity
      * TODO: build a class for situation just like UserProfile
      */
-    public LinkedList<String> getModality(UserProfile user, Difficulty diff, Weather weather, Modality m) {
+    public LinkedList<String> getModality(UserProfile user, DifficultyRDF diff, Weather weather, Modality m) {
 
         String oldUri = weather.getURI();
         weather.setUri("http://imi.org/" + oldUri);

@@ -68,18 +68,6 @@ public class AlarmAlertActivity extends Activity implements OnClickListener {
 
         // here we can change modality, instead of changing the mathProblem, we do it by changing the
         // weather condition and corresponding weatherProblems, namely, weatherProblems(sunny),weatherProblems(rainy),etc..
-//        switch (alarm.getDifficulty()) {
-//
-//		case EASY:
-//			mathProblem = new MathProblem(3);
-//			break;
-//		case MEDIUM:
-//			mathProblem = new MathProblem(4);
-//			break;
-//		case HARD:
-//			mathProblem = new MathProblem(5);
-//			break;
-//		}
 
         switch (alarm.getDifficulty()) {
 
@@ -91,7 +79,6 @@ public class AlarmAlertActivity extends Activity implements OnClickListener {
                 break;
             case HARD:
                 mathProblem = new MathProblem(5);
-//                new ScrathActivity();
                 break;
         }
 

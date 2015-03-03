@@ -7,7 +7,7 @@ public class UserProfile {
 	private String name; 
 	private String uri;
 	
-	UserProfile(String uri, String name) {
+	public UserProfile(String uri, String name) {
 		this.uri = uri; 
 		this.name = name; 
 	}

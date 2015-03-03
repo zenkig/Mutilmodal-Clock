@@ -26,6 +26,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="menu_item_new">New</string>
     <string name="menu_item_save">Save</string>
     <string name="menu_item_delete">Cancel</string>
+    <string name="menu_item_checkio">Check I/O</string>
     <string name="menu_item_rate">Rate on Goolge Play</string>
     <string name="menu_item_website">Website</string>
     <string name="menu_item_report">Report a Bug</string>
@@ -57,7 +58,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="title_activity_speech">SpeechActivity</string>
 
     <!-- Weather Alarm Activity -->
-    <string name="textsunny">i love sunny day</string>
+    <string name="textsunny">sunny</string>
     <string name="speechConfirm">Bingooo!</string>
     <string name="title_activity_noise">NoiseActivity</string>
 
@@ -90,7 +91,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <string name="title_activity_home">HomeActivity</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-
     <!-- RDF Model contorl settings -->
     <string-array name="userprofile">
         <item>NormalUser</item>
@@ -106,5 +106,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <item>Cloudy</item>
         <item>Rainy</item>
     </string-array>
+
+    <string name="title_activity_vibrator_demo">VibratorDemoActivity</string>
 
 </resources>

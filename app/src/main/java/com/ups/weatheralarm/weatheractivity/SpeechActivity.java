@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ups.weatheralarm.HomeActivity;
 
 import java.util.ArrayList;
 
@@ -28,6 +31,7 @@ public class SpeechActivity extends ActionBarActivity {
         Dialog match_text_dialog;
         ListView textlist;
         ArrayList<String> matches_text;
+        final Handler handler = new Handler();
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -77,27 +81,41 @@ public class SpeechActivity extends ActionBarActivity {
 
                 System.out.println("Voice Option:" + matches_text.get(0)); // debug speech
 
+
                 textlist.setAdapter(adapter);
                 textlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
-                        Speech.setText("You said " +matches_text.get(position));
+
+                       // Speech.setText("You said " + matches_text.get(position));
+
+                        String stringDefault = getString(R.string.textsunny);
+
+                        if( matches_text.get(position).equals(stringDefault)){
+                            setContentView(R.layout.activity_home); // view jump
+                            System.out.println("Voice Output:" + R.string.speechConfirm); // compare
+                            Speech.setText("You said " + stringDefault);
+                            setContentView(R.layout.sunnydone);
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    //Do something after 100ms
+                                    Intent intent = new Intent();
+                                    intent.setClass(SpeechActivity.this, HomeActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                    //setContentView(R.layout.activity_home);
+                                }
+                            }, 3000);
+                        }else{
+                            System.out.println("Try again !!"); // compare
+                            Speech.setText("Try again !!");
+                        }
                         match_text_dialog.hide();
                     }
                 });
                 match_text_dialog.show();
-
-                String stringDefault = getString(R.string.textsunny);
-                if( matches_text.get(0) == stringDefault){
-                    setContentView(R.layout.activity_home); // view jump
-                    System.out.println("Voice Output:" + R.string.speechConfirm); // compare
-                    Speech.setText("You said " + stringDefault);
-                   // setContentView(R.layout.activity_home);
-                }else{
-                    System.out.println("Try again !!"); // compare
-                    Speech.setText("Try again !!");
-                }
 
             }
             super.onActivityResult(requestCode, resultCode, data);

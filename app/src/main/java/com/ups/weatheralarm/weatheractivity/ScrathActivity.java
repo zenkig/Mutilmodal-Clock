@@ -2,6 +2,7 @@ package com.ups.weatheralarm.weatheractivity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -11,11 +12,17 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.Message;
+import android.text.Layout;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.ups.weatheralarm.HomeActivity;
+
+import za.co.neilson.alarm.R;
 
 /**
  * Created by zenkig on 15/2/5.
@@ -24,6 +31,8 @@ import android.view.View;
 public class ScrathActivity extends Activity {
     int screenWidth = 0;
     int screenHeight = 0;
+
+    final Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,6 +167,19 @@ public class ScrathActivity extends Activity {
                         isComplete = true;
                         postInvalidate();
                         // set a page jumper HERE ! to turn to weather info page
+
+
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //Do something after 100ms
+                                Intent intent = new Intent();
+                                intent.setClass(ScrathActivity.this, HomeActivity.class);
+                                startActivity(intent);
+                                finish();
+                                //setContentView(R.layout.activity_home);
+                            }
+                        }, 2000);
 
                     }
                 }

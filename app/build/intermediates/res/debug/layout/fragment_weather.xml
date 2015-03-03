@@ -5,16 +5,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#6EC1C5"
-    tools:context="com.ups.weatheralarm.weatherapi.WeatherFragment">
+    android:background="#ff0097a7"
+    tools:context="com.ups.weatheralarm.weatherapi.WeatherFragment"
+    android:textAlignment="center">
+    <!--android:id="@+id/"-->
+
 
     <TextView
         android:id="@+id/cityText"
         style="?android:attr/textAppearanceMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:layout_centerHorizontal="true" />
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffeeeeee" />
 
     <ImageView
         android:id="@+id/condIcon"
@@ -30,7 +34,7 @@
         android:layout_below="@id/condIcon"
         android:textSize="18dp"
         android:layout_alignLeft="@id/condIcon"
-        />
+        android:textColor="#ffeeeeee" />
 
     <TextView
         android:id="@+id/temp"
@@ -40,7 +44,8 @@
         android:layout_marginLeft="12dp"
         android:layout_alignBaseline="@id/condDescr"
         android:textSize="18dp"
-        android:layout_toRightOf="@id/condDescr"/>
+        android:layout_toRightOf="@id/condDescr"
+        android:textColor="#ffeeeeee" />
 
     <TextView
         android:id="@+id/pressLab"
@@ -49,8 +54,9 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@id/condDescr"
         android:text="Pressure"
-        android:textSize="18dp"
-        android:layout_marginTop="15dp" />
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#ffeeeeee" />
 
     <TextView
         android:id="@+id/press"
@@ -59,7 +65,8 @@
         android:layout_alignBaseline="@id/pressLab"
         android:layout_toRightOf="@id/pressLab"
         android:textSize="18dp"
-        style="@style/valData"/>
+        style="@style/valData"
+        android:textColor="#ffeeeeee" />
 
     <TextView
         android:id="@+id/humLab"
@@ -67,8 +74,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/pressLab"
-        android:textSize="18dp"
-        android:text="Humidity" />
+        android:textSize="25dp"
+        android:text="Humidity"
+        android:textColor="#ffeeeeee"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/hum"
@@ -77,7 +86,8 @@
         android:layout_alignBaseline="@id/humLab"
         android:layout_toRightOf="@id/humLab"
         android:layout_marginLeft="4dp"
-        android:textSize="18dp"
+        android:textSize="20dp"
+        android:textColor="#ffeeeeee"
         style="@style/valData"/>
 
     <TextView
@@ -86,8 +96,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/humLab"
-        android:textSize="18dp"
-        android:text="Wind" />
+        android:textSize="25dp"
+        android:text="Wind"
+        android:textColor="#ffeeeeee"
+        android:layout_marginTop="20dp" />
 
     <TextView
         android:id="@+id/windSpeed"
@@ -96,7 +108,8 @@
         android:layout_alignBaseline="@id/windLab"
         android:layout_toRightOf="@id/windLab"
         android:layout_marginLeft="4dp"
-        android:textSize="18dp"
+        android:textSize="20dp"
+        android:textColor="#ffeeeeee"
         style="@style/valData" />
 
     <TextView
@@ -106,8 +119,9 @@
         android:layout_alignBaseline="@id/windLab"
         android:layout_toRightOf="@id/windSpeed"
         android:layout_marginLeft="4dp"
-        android:textSize="18dp"
+        android:textSize="20dp"
+        android:textColor="#ffeeeeee"
         style="@style/valData"/>
 
 </RelativeLayout>
-<!-- From: file:/Users/zenkig/Documents/AndroidCode/Mutilmodal-Clock/app/src/main/res/layout/fragment_weather.xml -->
+<!-- From: file:/Users/Ziyao/Documents/workspace/Mutilmodal-Clock/app/src/main/res/layout/fragment_weather.xml -->

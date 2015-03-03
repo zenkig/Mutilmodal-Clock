@@ -5,13 +5,17 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
+
+import com.ups.weatheralarm.HomeActivity;
 
 import za.co.neilson.alarm.R;
 
@@ -19,6 +23,8 @@ public class ShakeActivity extends Activity {
     private SensorManager sensorManager;
     private SensorEventListener shakeListener;
     private AlertDialog.Builder dialogBuilder;
+
+    final Handler handler = new Handler();
 
     private boolean isRefresh = false;
 
@@ -58,7 +64,7 @@ public class ShakeActivity extends Activity {
     }
 
     private class ShakeSensorListener implements SensorEventListener {
-        private static final int ACCELERATE_VALUE = 20;
+        private static final int ACCELERATE_VALUE = 18;
 
         @Override
         public void onSensorChanged(SensorEvent event) {
@@ -93,6 +99,18 @@ public class ShakeActivity extends Activity {
                 VibratorHelper.Vibrate(ShakeActivity.this, 300);
                 isRefresh = true;
                 dialogBuilder.show();
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Do something after 100ms
+                        Intent intent = new Intent();
+                        intent.setClass(ShakeActivity.this, HomeActivity.class);
+                        startActivity(intent);
+                        finish();
+                        //setContentView(R.layout.activity_home);
+                    }
+                }, 2000);
             }
 
         }

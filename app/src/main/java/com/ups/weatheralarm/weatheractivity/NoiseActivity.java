@@ -2,12 +2,15 @@ package com.ups.weatheralarm.weatheractivity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ups.weatheralarm.HomeActivity;
 
 import za.co.neilson.alarm.R;
 
@@ -35,6 +38,8 @@ public class NoiseActivity extends Activity {
 
     /* sound data source */
     private SoundMeter mSensor;
+
+    final Handler handler = new Handler();
 
     /**
      * *************** Define runnable thread again and again, detect noise ********
@@ -157,8 +162,19 @@ public class NoiseActivity extends Activity {
         // Show alert when noise thersold crossed
         Toast.makeText(getApplicationContext(), "Noise Test Passed, Congratulations!",
                 Toast.LENGTH_LONG).show();
-        setContentView(R.layout.raindone); // change view to
+        setContentView(R.layout.blowcloudy); // change view to
 
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 100ms
+                Intent intent = new Intent();
+                intent.setClass(NoiseActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+                //setContentView(R.layout.activity_home);
+            }
+        }, 3000);
     }
 
 

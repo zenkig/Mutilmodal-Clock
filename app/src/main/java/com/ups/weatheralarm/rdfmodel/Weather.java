@@ -1,7 +1,7 @@
 package com.ups.weatheralarm.rdfmodel;
 
 public class Weather {
-	Weather(String name, String uri) {
+	public Weather(String name, String uri) {
 		this.name = name;
 		this.uri = uri;
 	}

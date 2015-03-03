@@ -17,14 +17,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ArrayList;
+
+import android.content.Context;
 
 import com.ups.weatheralarm.alert.AlarmAlertBroadcastReciever;
+import com.ups.weatheralarm.rdfmodel.DifficultyRDF;
+import com.ups.weatheralarm.rdfmodel.UserProfile;
+import com.ups.weatheralarm.rdfmodel.Weather;
+import com.ups.weatheralarm.rdfmodel.*;
 
 public class Alarm implements Serializable {
 
@@ -37,7 +45,16 @@ public class Alarm implements Serializable {
     private Boolean vibrate = true;
     private String alarmName = "Alarm Clock";
     private Difficulty difficulty = Difficulty.EASY;
-    private UserProfile userProfile = UserProfile.NORMAL;
+
+    private ModeUserProfile modeUserProfile = ModeUserProfile.NormalUser;
+    private ModeDifficulty modeDifficulty = ModeDifficulty.NormalDiff;
+    private ModeWeather modeWeather = ModeWeather.Sunny;
+
+    public RDFModel rdf;
+    Modality m;
+//    Modality m = new Modality();
+    public Boolean[] inputModality = {false, false, false, false, false};//Speak, Click, Blow, Wipe, Shake
+    public Boolean[] outputModality = { false, false, false, false};// Visual, Sound, Vibrate, Flash
 
     public Alarm() {
 
@@ -132,7 +149,7 @@ public class Alarm implements Serializable {
     }
 
     /**
-     * @param set the repeatDays to set
+     *
      */
     public void setDays(Day[] days) {
         this.days = days;
@@ -210,14 +227,91 @@ public class Alarm implements Serializable {
         this.difficulty = difficulty;
     }
 
-
-    // user profile methods.
-    public UserProfile getUserProfile() {
-        return userProfile;
+    public ModeDifficulty getModeDifficulty() {
+        return modeDifficulty;
     }
 
-    public void setUserProfile(UserProfile userProfile) {
-        this.userProfile = userProfile;
+    public void setModeDifficulty(ModeDifficulty modeDifficulty) {
+        this.modeDifficulty = modeDifficulty;
+    }
+
+    // user profile methods.
+    public ModeUserProfile getModeUserProfile() {
+        return modeUserProfile;
+    }
+
+    public void setUserProfile(ModeUserProfile modeUserProfile) {
+        this.modeUserProfile = modeUserProfile;
+    }
+
+    public ModeWeather getModeWeather() {
+        return modeWeather;
+    }
+
+    public void setModeWeather(ModeWeather modeWeather) {
+        this.modeWeather = modeWeather;
+    }
+
+
+    public void setModality(){
+
+
+//        try {
+//            this.rdf = new RDFModel();
+//        } catch (IOException e1) {
+//            // TODO Auto-generated catch block
+//            e1.printStackTrace();
+//        }
+        m = new Modality();
+
+        ModeDifficulty md = getModeDifficulty();
+        ModeUserProfile up = getModeUserProfile();
+        ModeWeather wi = getModeWeather();
+
+        String attr1 = md.toString();
+        String attr2 = up.toString();
+        String attr3 = wi.toString();
+
+
+        //Log.i("rescue: mode", attr1 + " " + attr2 + " " + attr3);
+
+        UserProfile userProfile = new UserProfile("http://imi.org/" + attr1, attr1);
+        DifficultyRDF difficulty = new DifficultyRDF("http://imi.org/" + attr2, attr2);
+        Weather weather = new Weather("http://imi.org/" + attr3, attr3);
+
+        rdf.getModality(userProfile, difficulty, weather, m);
+
+        ArrayList<String> inList = m.getInputModality();
+        ArrayList<String> outList = m.getOutputModality();
+
+        System.out.println("INPUT LIST: " + inList);
+        System.out.println("OUTPUT LIST: " + outList);
+
+        for(int num=0; num<inList.size(); num++)
+        {
+            if (inList.contains("Speak")) {
+                inputModality[0] = true;//Speak, Click, Blow, Wipe, Shake
+            } else if (inList.contains("Click")) {
+                inputModality[1] = true;//Speak, Click, Blow, Wipe, Shake
+            } else if (inList.contains("Blow")) {
+                inputModality[2] = true;//Speak, Click, Blow, Wipe, Shake
+            } else if (inList.contains("Wipe")) {
+                inputModality[3] = true;////Speak, Click, Blow, Wipe, Shake
+            } else if (inList.contains("Shake")) {
+                inputModality[4] = true;//Speak, Click, Blow, Wipe, Shake
+            }
+        }
+        for(int num=0; num<outList.size(); num++) {
+            if (outList.contains("Visual")) {
+                outputModality[0] = true;//Visual, Sound, Vibrate, Flash
+            } else if (outList.contains("Sound")) {
+                outputModality[1] = true;//Visual, Sound, Vibrate, Flash
+            } else if (outList.contains("Vibrate")) {
+                outputModality[2] = true;//Visual, Sound, Vibrate, Flash
+            } else if (outList.contains("Flash")) {
+                outputModality[3] = true;//Visual, Sound, Vibrate, Flash
+            }
+        }
     }
 
     public int getId() {
@@ -298,6 +392,7 @@ public class Alarm implements Serializable {
         return alert;
     }
 
+
     public enum Difficulty {
         EASY,
         MEDIUM,
@@ -317,20 +412,54 @@ public class Alarm implements Serializable {
         }
     }
 
-    public enum UserProfile {
-        BLIND,
-        DEAF,
-        NORMAL;
+    public enum ModeDifficulty {
+        NormalDiff,
+        HardDiff;
 
         @Override
         public String toString() {
             switch (this.ordinal()) {
                 case 0:
-                    return "Blind";
+                    return "NormalDiff";
                 case 1:
-                    return "Deaf";
+                    return "HardDiff";
+            }
+            return super.toString();
+        }
+    }
+
+    public enum ModeUserProfile {
+        NormalUser,
+        DeafUser;
+
+        @Override
+        public String toString() {
+            switch (this.ordinal()) {
+                case 0:
+                    return "NormalUser";
+                case 1:
+                    return "DeafUser";
+            }
+            return super.toString();
+        }
+    }
+    public enum ModeWeather {
+        Sunny,
+        Cloudy,
+        Snowy,
+        Rainy;
+
+        @Override
+        public String toString() {
+            switch (this.ordinal()) {
+                case 0:
+                    return "Sunny";
+                case 1:
+                    return "Cloudy";
                 case 2:
-                    return "Normal";
+                    return "Snowy";
+                case 3:
+                    return "Rainy";
             }
             return super.toString();
         }

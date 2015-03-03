@@ -60,7 +60,8 @@ public class AlarmActivity extends BaseActivity {
 
                         Database.init(AlarmActivity.this);
                         Database.deleteEntry(alarm);
-                        callMathAlarmScheduleService();
+
+                        callMathAlarmScheduleService(); //call s
 
                         updateAlarmList();
                     }
@@ -78,7 +79,7 @@ public class AlarmActivity extends BaseActivity {
             }
         });
 
-        callMathAlarmScheduleService();
+        callMathAlarmScheduleService();  //
 
        alarmListAdapter = new AlarmListAdapter(this);  // Newly changed 15.3.1
         this.AlarmsListView.setAdapter(alarmListAdapter);

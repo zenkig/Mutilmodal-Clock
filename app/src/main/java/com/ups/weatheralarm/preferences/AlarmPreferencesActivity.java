@@ -40,12 +40,15 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.Calendar;
 
 import com.ups.weatheralarm.Alarm;
 import com.ups.weatheralarm.BaseActivity;
 import za.co.neilson.alarm.R;
 import com.ups.weatheralarm.database.Database;
+import com.ups.weatheralarm.rdfmodel.Modality;
+import com.ups.weatheralarm.rdfmodel.RDFModel;
 
 public class AlarmPreferencesActivity extends BaseActivity {
 
@@ -153,6 +156,18 @@ public class AlarmPreferencesActivity extends BaseActivity {
                                     case ALARM_DIFFICULTY:
                                         Alarm.Difficulty d = Alarm.Difficulty.values()[which];
                                         alarm.setDifficulty(d);
+                                        break;
+                                    case MODE_DIFFICULTY:
+                                        Alarm.ModeDifficulty md = Alarm.ModeDifficulty.values()[which];
+                                        alarm.setModeDifficulty(md);
+                                        break;
+                                    case MODE_USERPROFILE:
+                                        Alarm.ModeUserProfile up = Alarm.ModeUserProfile.values()[which];
+                                        alarm.setUserProfile(up);
+                                        break;
+                                    case MODE_WEATHER:
+                                        Alarm.ModeWeather wi = Alarm.ModeWeather.values()[which];
+                                        alarm.setModeWeather(wi);
                                         break;
                                     case ALARM_TONE:
                                         alarm.setAlarmTonePath(alarmPreferenceListAdapter.getAlarmTonePaths()[which]);
@@ -334,6 +349,17 @@ public class AlarmPreferencesActivity extends BaseActivity {
                 });
                 dialog.show();
 
+                break;
+            case R.id.menu_item_checkio:
+                try {
+                    alarm.rdf = new RDFModel(this);
+                } catch (IOException e1) {
+                    // TODO Auto-generated catch block
+                    e1.printStackTrace();
+                }
+
+                alarm.setModality();
+                //Toast.makeText(getApplicationContext(), "InputModality:" + alarm.inputModality + " OutputModality:" + alarm.outputModality, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);
